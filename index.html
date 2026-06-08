@@ -66,259 +66,115 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Poppins', sans-serif; background-color: var(--bg); color: var(--text);
-            line-height: 1.6; min-height: 100vh; padding: 20px;
-            transition: background-color 0.3s, color 0.3s;
+            line-height: 1.5; min-height: 100vh; padding: 10px;
+            transition: background-color 0.3s, color 0.3s; font-size: 15px;
         }
         .container {
-            max-width: 950px; margin: 0 auto; background-color: var(--surface);
+            max-width: 600px; margin: 0 auto; background-color: var(--surface);
             border-radius: 16px; box-shadow: var(--shadow); overflow: hidden;
             transition: background-color 0.3s;
         }
         header {
-            text-align: center; padding: 30px 20px; background: var(--header-bg); position: relative;
+            text-align: center; padding: 25px 15px; background: var(--header-bg); position: relative;
         }
-        .profile-img {
-            width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
-            border: 4px solid #fff; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        h1 { font-weight: 600; color: #fff; font-size: 24px; margin-bottom: 15px; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
-        .stats { display: flex; justify-content: center; gap: 25px; margin-top: 15px; }
+        .profile-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; margin-bottom: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        h1 { font-weight: 600; color: #fff; font-size: 22px; margin-bottom: 10px; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+        .stats { display: flex; justify-content: center; gap: 20px; margin-top: 10px; }
         .stat { text-align: center; }
-        .number { display: block; font-size: 18px; font-weight: 600; color: #fff; }
-        .label { font-size: 12px; color: rgba(255,255,255,0.9); text-transform: uppercase; letter-spacing: 1px; }
-        .theme-toggle {
-            position: absolute; top: 20px; right: 25px; background: rgba(255,255,255,0.2);
-            border: none; color: #fff; font-size: 20px; cursor: pointer; width: 40px; height: 40px;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            transition: 0.3s; backdrop-filter: blur(4px);
-        }
+        .number { display: block; font-size: 16px; font-weight: 600; color: #fff; }
+        .label { font-size: 11px; color: rgba(255,255,255,0.9); text-transform: uppercase; letter-spacing: 1px; }
+        .theme-toggle { position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.2); border: none; color: #fff; font-size: 18px; cursor: pointer; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; backdrop-filter: blur(4px); }
         .theme-toggle:hover { background: rgba(255,255,255,0.4); }
-        section { padding: 30px 25px; border-bottom: 1px solid var(--border); transition: border-color 0.3s; }
-        h2 {
-            margin: 0 0 20px; font-size: 22px; font-weight: 600; color: var(--accent);
-            display: flex; align-items: center; justify-content: center; gap: 10px;
-            text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s;
-        }
-        .contact-info { text-align: center; margin-bottom: 15px; font-size: 1.1rem; }
-        .contact-links { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .whatsapp-btn, .instagram-btn {
-            padding: 12px 24px; border-radius: 8px; font-weight: 500; font-size: 16px;
-            text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
-            transition: 0.3s; color: #fff;
-        }
+        section { padding: 20px 15px; border-bottom: 1px solid var(--border); transition: border-color 0.3s; }
+        h2 { margin: 0 0 15px; font-size: 18px; font-weight: 600; color: var(--accent); display: flex; align-items: center; justify-content: center; gap: 8px; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: color 0.3s; }
+        .contact-info { text-align: center; margin-bottom: 10px; font-size: 0.95rem; }
+        .contact-links { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        .whatsapp-btn, .instagram-btn { padding: 10px 18px; border-radius: 8px; font-weight: 500; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: 0.3s; color: #fff; }
         .whatsapp-btn { background-color: #25d366; } .whatsapp-btn:hover { background-color: #128C7E; }
         .instagram-btn { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); } .instagram-btn:hover { opacity: 0.9; }
-        .notice {
-            background-color: var(--resumo-bg); padding: 12px; font-size: 14px;
-            border-radius: 8px; display: flex; align-items: center; justify-content: center;
-            gap: 8px; color: var(--text); margin-top: 10px; transition: background-color 0.3s;
-        }
-        .payment-info { display: flex; justify-content: center; gap: 30px; }
-        .payment-item { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 16px; }
-        .payment-item i { font-size: 24px; color: var(--accent); }
-        .category-section { margin-bottom: 35px; scroll-margin-top: 20px; }
-        .table-container { overflow-x: auto; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        table { width: 100%; border-collapse: collapse; background-color: var(--surface); min-width: 600px; }
-        td, th { padding: 14px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; color: var(--text); }
-        .piercing-img {
-            width: 100px; height: 100px; text-align: center; vertical-align: middle;
-            cursor: pointer;
-        }
-        .piercing-img img {
-            width: 100px; height: 100px; border-radius: 8px; object-fit: cover; background-color: #f0f0f0;
-            transition: transform 0.2s;
-        }
-        .piercing-img img:hover { transform: scale(1.05); }
-        .joia-img img { width: 60px; height: 60px; border-radius: 8px; object-fit: cover; background-color: #f0f0f0; cursor: pointer; }
-        .piercing-info strong { display: block; font-weight: 600; color: var(--text); font-size: 18px; }
-        .piercing-info small { font-size: 13px; color: var(--text-secondary); }
-        .piercing-price { font-weight: 600; color: var(--accent); text-align: right; font-size: 18px; }
+        .notice { background-color: var(--resumo-bg); padding: 10px; font-size: 13px; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 6px; color: var(--text); margin-top: 8px; }
+        .payment-info { display: flex; justify-content: center; gap: 20px; }
+        .payment-item { display: flex; flex-direction: column; align-items: center; gap: 5px; font-size: 14px; }
+        .payment-item i { font-size: 20px; color: var(--accent); }
+        .category-section { margin-bottom: 25px; scroll-margin-top: 20px; }
+        .table-container { overflow-x: visible; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; background-color: var(--surface); }
+        td, th { padding: 10px 8px; border-bottom: 1px solid var(--border); vertical-align: middle; color: var(--text); }
+        .piercing-img { width: 45px; height: 45px; text-align: center; vertical-align: middle; cursor: pointer; }
+        .piercing-img img { width: 45px; height: 45px; border-radius: 6px; object-fit: cover; background-color: #f0f0f0; transition: transform 0.2s; }
+        .piercing-img img:active { transform: scale(1.1); }
+        .joia-img img { width: 36px; height: 36px; border-radius: 6px; object-fit: cover; background-color: #f0f0f0; cursor: pointer; }
+        .piercing-info strong { display: block; font-weight: 600; color: var(--text); font-size: 15px; }
+        .piercing-info small { font-size: 11px; color: var(--text-secondary); }
+        .piercing-price { font-weight: 600; color: var(--accent); text-align: right; font-size: 15px; white-space: nowrap; }
         .piercing-row { cursor: pointer; transition: background-color .2s; }
-        .piercing-row:hover td { background-color: rgba(238,195,109,0.15); }
+        .piercing-row:active { background-color: rgba(238,195,109,0.25); }
         .piercing-row.selected td { background-color: rgba(238,195,109,0.25); }
-        .check-mark {
-            display: inline-block; width: 24px; height: 24px; border: 2px solid var(--accent);
-            border-radius: 5px; transition: all .2s; text-align: center; line-height: 20px;
-            font-size: 16px; color: transparent; font-weight: bold;
-        }
+        .check-mark { display: inline-block; width: 20px; height: 20px; border: 2px solid var(--accent); border-radius: 4px; transition: all .2s; text-align: center; line-height: 16px; font-size: 14px; color: transparent; font-weight: bold; }
         .piercing-row.selected .check-mark { background-color: var(--accent); color: #fff; }
         .piercing-row.selected .check-mark::after { content: '✓'; }
         .joia-options-row td { padding: 0; border-bottom: 2px solid var(--accent); }
-        .joia-options {
-            padding: 18px 20px; background: var(--joia-options-bg); display: flex;
-            align-items: flex-start; gap: 20px; flex-wrap: wrap;
-            animation: fadeIn 0.3s ease; color: var(--joia-text);
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .joia-list { flex: 1; display: flex; flex-direction: column; gap: 12px; }
-        .joia-selected-preview { flex: 0 0 180px; text-align: center; }
-        .joia-selected-preview img {
-            width: 160px; height: 160px; object-fit: cover; border-radius: 12px;
-            border: 2px solid var(--accent); background: #fff;
-            cursor: pointer;
-        }
+        .joia-options { padding: 12px; background: var(--joia-options-bg); display: flex; flex-direction: column; gap: 10px; animation: fadeIn 0.3s ease; color: var(--joia-text); transition: background-color 0.3s, color 0.3s; }
+        .joia-list { display: flex; flex-direction: column; gap: 8px; }
+        .joia-selected-preview { text-align: center; margin-top: 10px; }
+        .joia-selected-preview img { width: 100px; height: 100px; object-fit: cover; border-radius: 10px; border: 2px solid var(--accent); background: #fff; cursor: pointer; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
-        .joia-option {
-            display: flex; align-items: center; gap: 12px; font-size: 14px; cursor: pointer;
-            padding: 8px; border-radius: 8px; transition: background 0.2s;
-            user-select: none;
-        }
-        .joia-option input[type="radio"] { accent-color: var(--accent); width: 18px; height: 18px; }
+        .joia-option { display: flex; align-items: center; gap: 10px; font-size: 13px; cursor: pointer; padding: 8px; border-radius: 8px; transition: background 0.2s; user-select: none; }
+        .joia-option input[type="radio"] { accent-color: var(--accent); width: 16px; height: 16px; }
         .joia-option:has(input:checked) { background: rgba(238,195,109,0.2); outline: 1px solid var(--accent); }
-        .joia-option .joia-img img { width: 60px; height: 60px; }
-        .joia-other-icon {
-            width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
-            border-radius: 8px; background: var(--other-icon-bg); color: var(--other-icon-color); font-size: 24px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .other-input {
-            display: none; margin-top: 6px; width: 100%; padding: 10px;
-            border: 1px solid var(--input-border); border-radius: 6px; font-family: inherit; font-size: 14px;
-            background-color: var(--input-bg); color: var(--text);
-        }
+        .joia-option .joia-img img { width: 36px; height: 36px; }
+        .joia-other-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 6px; background: var(--other-icon-bg); color: var(--other-icon-color); font-size: 18px; transition: background-color 0.3s, color 0.3s; }
+        .other-input { display: none; margin-top: 6px; width: 100%; padding: 8px; border: 1px solid var(--input-border); border-radius: 6px; font-family: inherit; font-size: 13px; background-color: var(--input-bg); color: var(--text); }
         .joia-option input[value="outro"]:checked ~ .other-input { display: block; }
-
-        .resumo {
-            background-color: var(--resumo-bg); padding: 20px; border-radius: 10px;
-            margin-top: 30px; font-size: 15px; transition: background-color 0.3s;
-        }
-        .resumo .total { font-size: 22px; font-weight: 700; color: var(--accent); margin-top: 10px; }
+        .resumo { background-color: var(--resumo-bg); padding: 15px; border-radius: 10px; margin-top: 20px; font-size: 14px; transition: background-color 0.3s; }
+        .resumo .total { font-size: 20px; font-weight: 700; color: var(--accent); margin-top: 8px; }
         .contador-piercings { font-weight: 600; color: var(--accent); margin-bottom: 5px; }
-
-        .form-card {
-            background: var(--surface); padding: 25px; border-radius: 16px;
-            box-shadow: var(--shadow); transition: background 0.3s;
-        }
-        .form-group { margin-bottom: 20px; }
-        .form-group label {
-            display: flex; align-items: center; gap: 8px; margin-bottom: 8px;
-            font-weight: 600; font-size: 15px; color: var(--text);
-        }
+        .form-card { background: var(--surface); padding: 20px; border-radius: 14px; box-shadow: var(--shadow); transition: background 0.3s; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; font-weight: 600; font-size: 14px; color: var(--text); }
         .input-with-icon { position: relative; }
-        .input-with-icon i {
-            position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
-            color: var(--accent); font-size: 18px; pointer-events: none;
-        }
-        .input-with-icon input,
-        .input-with-icon select,
-        .input-with-icon textarea {
-            width: 100%; padding: 14px 14px 14px 45px; border: 1px solid var(--input-border);
-            border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 16px;
-            background-color: var(--input-bg); color: var(--text);
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        .input-with-icon textarea { padding-left: 45px; min-height: 100px; }
-        .input-with-icon input:focus,
-        .input-with-icon select:focus,
-        .input-with-icon textarea:focus {
-            border-color: var(--accent); outline: none;
-            box-shadow: 0 0 0 3px rgba(238,195,109,0.2);
-        }
-        .chips-container { display: flex; flex-wrap: wrap; gap: 10px; }
-        .chip {
-            display: flex; align-items: center; gap: 6px; padding: 10px 16px;
-            border: 1px solid var(--chip-border); border-radius: 30px;
-            cursor: pointer; transition: all 0.3s; font-size: 14px; color: var(--text);
-            background: var(--chip-bg);
-        }
+        .input-with-icon i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--accent); font-size: 16px; pointer-events: none; }
+        .input-with-icon input, .input-with-icon select, .input-with-icon textarea { width: 100%; padding: 12px 12px 12px 38px; border: 1px solid var(--input-border); border-radius: 10px; font-family: 'Poppins', sans-serif; font-size: 15px; background-color: var(--input-bg); color: var(--text); transition: border-color 0.3s, box-shadow 0.3s; }
+        .input-with-icon textarea { padding-left: 38px; min-height: 80px; }
+        .input-with-icon input:focus, .input-with-icon select:focus, .input-with-icon textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px rgba(238,195,109,0.2); }
+        .chips-container { display: flex; flex-wrap: wrap; gap: 8px; }
+        .chip { display: flex; align-items: center; gap: 4px; padding: 8px 12px; border: 1px solid var(--chip-border); border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 13px; color: var(--text); background: var(--chip-bg); }
         .chip input[type="radio"] { display: none; }
-        .chip:has(input:checked) {
-            background: var(--chip-checked-bg);
-            border-color: var(--chip-checked-border);
-            color: var(--accent); font-weight: 600;
-        }
-        .chip i { font-size: 16px; color: var(--accent); }
-
-        .btn-whatsapp {
-            width: 100%; padding: 16px; border: none; border-radius: 12px; font-size: 18px;
-            font-weight: 600; cursor: pointer; background: linear-gradient(135deg, #25d366, #128C7E);
-            color: white; display: flex; align-items: center; justify-content: center; gap: 10px;
-            margin-top: 25px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(37,211,102,0.4);
-            animation: pulse 2s infinite;
-        }
+        .chip:has(input:checked) { background: var(--chip-checked-bg); border-color: var(--chip-checked-border); color: var(--accent); font-weight: 600; }
+        .chip i { font-size: 14px; color: var(--accent); }
+        .btn-whatsapp { width: 100%; padding: 14px; border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; background: linear-gradient(135deg, #25d366, #128C7E); color: white; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 20px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(37,211,102,0.4); animation: pulse 2s infinite; }
         .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.5); animation: none; }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-
-        .carousel-section { padding: 30px 25px; border-bottom: 1px solid var(--border); transition: border-color 0.3s, background-color 0.3s; }
-        .carousel-container { position: relative; max-width: 100%; overflow: hidden; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); background-color: var(--carousel-card-bg); transition: background-color 0.3s; }
-        .carousel-track { display: flex; transition: transform 0.4s ease-in-out; }
-        .carousel-card { min-width: 100%; padding: 30px 25px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 15px; box-sizing: border-box; }
-        .carousel-card i { font-size: 32px; color: var(--accent); margin-bottom: 5px; }
-        .carousel-card p { font-size: 15px; color: var(--text); line-height: 1.6; max-width: 500px; }
-        .carousel-nav { display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 15px; }
-        .carousel-nav button {
-            background: var(--surface); border: 1px solid var(--border); color: var(--text);
-            width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 18px;
-            transition: all 0.3s; display: flex; align-items: center; justify-content: center;
-        }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); } 70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        .carousel-section { padding: 15px 10px; border-bottom: 1px solid var(--border); transition: border-color 0.3s, background-color 0.3s; }
+        .carousel-container { position: relative; max-width: 100%; overflow: hidden; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: var(--carousel-card-bg); transition: background-color 0.3s; }
+        .carousel-track { display: flex; transition: transform 0.3s ease-in-out; }
+        .carousel-card { min-width: 100%; padding: 18px 15px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; box-sizing: border-box; }
+        .carousel-card i { font-size: 26px; color: var(--accent); margin-bottom: 2px; }
+        .carousel-card p { font-size: 13px; color: var(--text); line-height: 1.5; max-width: 100%; }
+        .carousel-nav { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 10px; }
+        .carousel-nav button { background: var(--surface); border: 1px solid var(--border); color: var(--text); width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 16px; transition: all 0.3s; display: flex; align-items: center; justify-content: center; }
         .carousel-nav button:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
-        .carousel-dots { display: flex; gap: 8px; }
-        .carousel-dot { width: 10px; height: 10px; border-radius: 50%; background-color: var(--carousel-dot); border: none; cursor: pointer; transition: background-color 0.3s; }
+        .carousel-dots { display: flex; gap: 6px; }
+        .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background-color: var(--carousel-dot); border: none; cursor: pointer; transition: background-color 0.3s; }
         .carousel-dot.active { background-color: var(--carousel-dot-active); }
-
-        .floating-nav {
-            position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column;
-            align-items: center; gap: 10px; opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 1000;
-        }
+        .floating-nav { position: fixed; bottom: 20px; right: 15px; display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 1000; }
         .floating-nav.visible { opacity: 1; pointer-events: auto; }
-        .back-to-top {
-            width: 50px; height: 50px; background: var(--accent); color: #fff; border: none;
-            border-radius: 50%; font-size: 24px; cursor: pointer; display: flex; align-items: center;
-            justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: background 0.3s;
-        }
+        .back-to-top { width: 40px; height: 40px; background: var(--accent); color: #fff; border: none; border-radius: 50%; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: background 0.3s; }
         .back-to-top:hover { background: var(--accent-hover); }
-        .category-quick-links { display: flex; flex-direction: column; gap: 8px; }
-        .category-quick-links a {
-            width: 40px; height: 40px; background: var(--surface); border: 1px solid var(--border);
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            color: var(--text); text-decoration: none; font-size: 18px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: all 0.3s;
-        }
+        .category-quick-links { display: flex; flex-direction: column; gap: 6px; }
+        .category-quick-links a { width: 36px; height: 36px; background: var(--surface); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text); text-decoration: none; font-size: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); transition: all 0.3s; }
         .category-quick-links a:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
-        footer { text-align: center; padding: 20px; background-color: var(--surface); font-size: 13px; color: var(--text-secondary); border-top: 1px solid var(--border); transition: background-color 0.3s; }
-        .footer-links { margin-top: 8px; font-size: 12px; }
+        footer { text-align: center; padding: 15px; background-color: var(--surface); font-size: 12px; color: var(--text-secondary); border-top: 1px solid var(--border); transition: background-color 0.3s; }
+        .footer-links { margin-top: 5px; font-size: 11px; }
         .footer-links a { color: var(--accent); text-decoration: none; } .footer-links a:hover { text-decoration: underline; }
-
-        /* Lightbox */
-        .lightbox-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center;
-            z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.3s;
-        }
+        .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
         .lightbox-overlay.active { opacity: 1; pointer-events: auto; }
-        .lightbox-content {
-            max-width: 90vw; max-height: 90vh; position: relative;
-        }
-        .lightbox-content img {
-            max-width: 90vw; max-height: 90vh; object-fit: contain;
-            border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.5);
-        }
-        .lightbox-close {
-            position: absolute; top: -40px; right: 0; background: none; border: none;
-            color: #fff; font-size: 32px; cursor: pointer; line-height: 1;
-        }
-
-        @media (max-width: 600px) {
-            body { padding: 10px; }
-            .theme-toggle { top: 10px; right: 15px; }
-            .carousel-card { padding: 20px; }
-            .joia-options { flex-direction: column; align-items: center; }
-            .joia-selected-preview { margin-top: 15px; margin-left: 0; }
-            .input-with-icon i { left: 10px; }
-            .piercing-img { width: 60px; height: 60px; }
-            .piercing-img img { width: 60px; height: 60px; }
-            .joia-img img { width: 50px; height: 50px; }
-            .joia-selected-preview img { width: 120px; height: 120px; }
-            .joia-selected-preview { flex: 0 0 140px; }
-        }
+        .lightbox-content { max-width: 90vw; max-height: 90vh; position: relative; }
+        .lightbox-content img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+        .lightbox-close { position: absolute; top: -35px; right: 0; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; line-height: 1; }
     </style>
 </head>
 <body>
-    <!-- Lightbox -->
     <div class="lightbox-overlay" id="lightbox">
         <div class="lightbox-content">
             <button class="lightbox-close" id="lightboxClose">&times;</button>
@@ -351,25 +207,25 @@
 
         <main>
             <section class="contact-section">
-                <div class="contact-info">
-                    <p><i class="fas fa-clock"></i> Agendamentos pelo Whatsapp ou Instagram</p>
+                <div class="contact-info"><p><i class="fas fa-clock"></i> Agendamentos pelo Whatsapp ou Instagram</p>
                     <div class="contact-links">
                         <a class="whatsapp-btn" href="https://wa.me/5584999888967"><i class="fab fa-whatsapp"></i> WhatsApp </a>
                         <a class="instagram-btn" href="https://instagram.com/mariebpiercing/" target="_blank"><i class="fab fa-instagram"></i> Instagram </a>
                     </div>
                 </div>
-                <div class="notice"><i class="fas fa-exclamation-circle"></i> Valores dos piercings não incluem joias (exceto onde indicado)</div>
+                <div class="notice"><i class="fas fa-exclamation-circle"></i> Valores não incluem joias (exceto onde indicado)</div>
             </section>
 
+            <!-- INFO CARROSSEL -->
             <section class="carousel-section">
                 <h2><i class="fas fa-info-circle"></i> Informações importantes</h2>
                 <div class="carousel-container" id="infoCarousel">
                     <div class="carousel-track" id="infoTrack">
-                        <div class="carousel-card"><i class="fas fa-user-tag"></i><p><strong>Informar nome e Pronomes</strong><br>É essencial saber como você gostaria de ser chamado(a).</p></div>
-                        <div class="carousel-card"><i class="fas fa-id-card"></i><p><strong>Comprovar maior idade</strong><br>Documento com foto obrigatório (18+).</p></div>
-                        <div class="carousel-card"><i class="fas fa-file-signature"></i><p><strong>Autorização para menores</strong><br>Menores só com responsável e documento assinado.</p></div>
-                        <div class="carousel-card"><i class="fas fa-allergies"></i><p><strong>Informar alergias</strong><br>Alergia a metais ou outras substâncias.</p></div>
-                        <div class="carousel-card"><i class="fas fa-history"></i><p><strong>Histórico com piercing</strong><br>Complicações anteriores? Avise.</p></div>
+                        <div class="carousel-card"><i class="fas fa-user-tag"></i><p><strong>Nome e Pronomes</strong><br>Saber como você prefere ser chamade garante respeito e acolhimento.</p></div>
+                        <div class="carousel-card"><i class="fas fa-id-card"></i><p><strong>Maior idade</strong><br>Documento com foto obrigatório (18+).</p></div>
+                        <div class="carousel-card"><i class="fas fa-file-signature"></i><p><strong>Menores</strong><br>Só com responsável e documento assinado.</p></div>
+                        <div class="carousel-card"><i class="fas fa-allergies"></i><p><strong>Alergias</strong><br>Informe alergias a metais ou outras substâncias.</p></div>
+                        <div class="carousel-card"><i class="fas fa-history"></i><p><strong>Histórico</strong><br>Complicações anteriores? Avise.</p></div>
                         <div class="carousel-card"><i class="fas fa-map-marker-alt"></i><p><strong>Localização</strong><br>Importante para agendamento.</p></div>
                     </div>
                 </div>
@@ -380,6 +236,7 @@
                 </div>
             </section>
 
+            <!-- FAQ CARROSSEL -->
             <section class="carousel-section">
                 <h2><i class="fas fa-question-circle"></i> Dúvidas Frequentes</h2>
                 <div class="carousel-container" id="faqCarousel">
@@ -411,66 +268,66 @@
                 <div id="orelha" class="category-section">
                     <h2><i class="fas fa-ear-listen"></i> Orelha</h2>
                     <div class="table-container"><table><tbody>
-                        <tr class="piercing-row" data-id="or1" data-name="Lóbulo (joia inclusa)" data-preco="25"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Lóbulo.jpg" alt="Lóbulo"></td><td class="piercing-info"><strong>Lóbulo</strong><br><small>joia inclusa</small></td><td class="piercing-price">R$ 25,00</td></tr>
-                        <tr class="piercing-row" data-id="or2" data-name="Lóbulo (Par, joia inclusa)" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Lóbulo (Par).jpg" alt="Lóbulo (Par)"></td><td class="piercing-info"><strong>Lóbulo (Par)</strong><br><small>joia inclusa</small></td><td class="piercing-price">R$ 40,00</td></tr>
-                        <tr class="piercing-row" data-id="or3" data-name="Trâgus" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Trâgus.jpg" alt="Trâgus"></td><td class="piercing-info"><strong>Trâgus</strong></td><td class="piercing-price">R$ 40,00</td></tr>
-                        <tr class="piercing-row" data-id="or4" data-name="Anti-Trâgos" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Anti-Trâgos.jpg" alt="Anti-Trâgos"></td><td class="piercing-info"><strong>Anti-Trâgos</strong></td><td class="piercing-price">R$ 40,00</td></tr>
-                        <tr class="piercing-row" data-id="or5" data-name="Transversal" data-preco="60"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Transversal.jpg" alt="Transversal"></td><td class="piercing-info"><strong>Transversal</strong></td><td class="piercing-price">R$ 60,00</td></tr>
-                        <tr class="piercing-row" data-id="or6" data-name="Hélix" data-preco="50"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Hélix.jpg" alt="Hélix"></td><td class="piercing-info"><strong>Hélix</strong></td><td class="piercing-price">R$ 50,00</td></tr>
-                        <tr class="piercing-row" data-id="or7" data-name="Anti-Hélix" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Anti-Hélix.jpg" alt="Anti-Hélix"></td><td class="piercing-info"><strong>Anti-Hélix</strong></td><td class="piercing-price">R$ 40,00</td></tr>
-                        <tr class="piercing-row" data-id="or8" data-name="Mid-Hélix" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Mid-Hélix.jpg" alt="Mid-Hélix"></td><td class="piercing-info"><strong>Mid-Hélix</strong></td><td class="piercing-price">R$ 40,00</td></tr>
-                        <tr class="piercing-row" data-id="or9" data-name="Daith" data-preco="45"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Daith.jpg" alt="Daith"></td><td class="piercing-info"><strong>Daith</strong></td><td class="piercing-price">R$ 45,00</td></tr>
-                        <tr class="piercing-row" data-id="or10" data-name="Rook" data-preco="45"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Rook.jpg" alt="Rook"></td><td class="piercing-info"><strong>Rook</strong></td><td class="piercing-price">R$ 45,00</td></tr>
-                        <tr class="piercing-row" data-id="or11" data-name="Snug" data-preco="35"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Snug.jpg" alt="Snug"></td><td class="piercing-info"><strong>Snug</strong></td><td class="piercing-price">R$ 35,00</td></tr>
-                        <tr class="piercing-row" data-id="or12" data-name="Flat" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Flat.jpg" alt="Flat"></td><td class="piercing-info"><strong>Flat</strong></td><td class="piercing-price">R$ 40,00</td></tr>
-                        <tr class="piercing-row" data-id="or13" data-name="Australiano" data-preco="75"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Australiano.jpg" alt="Australiano"></td><td class="piercing-info"><strong>Australiano</strong></td><td class="piercing-price">R$ 75,00</td></tr>
-                        <tr class="piercing-row" data-id="or14" data-name="Californiano" data-preco="35"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Californiano.jpg" alt="Californiano"></td><td class="piercing-info"><strong>Californiano</strong></td><td class="piercing-price">R$ 35,00</td></tr>
-                        <tr class="piercing-row" data-id="or15" data-name="Conch" data-preco="60"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Conch.jpg" alt="Conch"></td><td class="piercing-info"><strong>Conch</strong></td><td class="piercing-price">R$ 60,00</td></tr>
+                        <tr class="piercing-row" data-id="or1" data-name="Lóbulo (joia inclusa)" data-preco="25"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Lóbulo.jpg" alt="Lóbulo"></td><td class="piercing-info"><strong>Lóbulo</strong><br><small>joia inclusa</small></td><td class="piercing-price">R$ 25</td></tr>
+                        <tr class="piercing-row" data-id="or2" data-name="Lóbulo (Par, joia inclusa)" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Lóbulo (Par).jpg" alt="Lóbulo (Par)"></td><td class="piercing-info"><strong>Lóbulo (Par)</strong><br><small>joia inclusa</small></td><td class="piercing-price">R$ 40</td></tr>
+                        <tr class="piercing-row" data-id="or3" data-name="Trâgus" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Trâgus.jpg" alt="Trâgus"></td><td class="piercing-info"><strong>Trâgus</strong></td><td class="piercing-price">R$ 40</td></tr>
+                        <tr class="piercing-row" data-id="or4" data-name="Anti-Trâgos" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Anti-Trâgos.jpg" alt="Anti-Trâgos"></td><td class="piercing-info"><strong>Anti-Trâgos</strong></td><td class="piercing-price">R$ 40</td></tr>
+                        <tr class="piercing-row" data-id="or5" data-name="Transversal" data-preco="60"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Transversal.jpg" alt="Transversal"></td><td class="piercing-info"><strong>Transversal</strong></td><td class="piercing-price">R$ 60</td></tr>
+                        <tr class="piercing-row" data-id="or6" data-name="Hélix" data-preco="50"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Hélix.jpg" alt="Hélix"></td><td class="piercing-info"><strong>Hélix</strong></td><td class="piercing-price">R$ 50</td></tr>
+                        <tr class="piercing-row" data-id="or7" data-name="Anti-Hélix" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Anti-Hélix.jpg" alt="Anti-Hélix"></td><td class="piercing-info"><strong>Anti-Hélix</strong></td><td class="piercing-price">R$ 40</td></tr>
+                        <tr class="piercing-row" data-id="or8" data-name="Mid-Hélix" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Mid-Hélix.jpg" alt="Mid-Hélix"></td><td class="piercing-info"><strong>Mid-Hélix</strong></td><td class="piercing-price">R$ 40</td></tr>
+                        <tr class="piercing-row" data-id="or9" data-name="Daith" data-preco="45"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Daith.jpg" alt="Daith"></td><td class="piercing-info"><strong>Daith</strong></td><td class="piercing-price">R$ 45</td></tr>
+                        <tr class="piercing-row" data-id="or10" data-name="Rook" data-preco="45"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Rook.jpg" alt="Rook"></td><td class="piercing-info"><strong>Rook</strong></td><td class="piercing-price">R$ 45</td></tr>
+                        <tr class="piercing-row" data-id="or11" data-name="Snug" data-preco="35"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Snug.jpg" alt="Snug"></td><td class="piercing-info"><strong>Snug</strong></td><td class="piercing-price">R$ 35</td></tr>
+                        <tr class="piercing-row" data-id="or12" data-name="Flat" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Flat.jpg" alt="Flat"></td><td class="piercing-info"><strong>Flat</strong></td><td class="piercing-price">R$ 40</td></tr>
+                        <tr class="piercing-row" data-id="or13" data-name="Australiano" data-preco="75"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Australiano.jpg" alt="Australiano"></td><td class="piercing-info"><strong>Australiano</strong></td><td class="piercing-price">R$ 75</td></tr>
+                        <tr class="piercing-row" data-id="or14" data-name="Californiano" data-preco="35"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Californiano.jpg" alt="Californiano"></td><td class="piercing-info"><strong>Californiano</strong></td><td class="piercing-price">R$ 35</td></tr>
+                        <tr class="piercing-row" data-id="or15" data-name="Conch" data-preco="60"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Conch.jpg" alt="Conch"></td><td class="piercing-info"><strong>Conch</strong></td><td class="piercing-price">R$ 60</td></tr>
                     </tbody></table></div>
                 </div>
                 <!-- CORPO -->
                 <div id="corpo" class="category-section">
                     <h2><i class="fas fa-female"></i> Corpo</h2>
                     <div class="table-container"><table><tbody>
-                        <tr class="piercing-row" data-id="co1" data-name="Umbigo" data-preco="60"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Umbigo.jpg" alt="Umbigo"></td><td class="piercing-info"><strong>Umbigo</strong></td><td class="piercing-price">R$ 60,00</td></tr>
-                        <tr class="piercing-row" data-id="co2" data-name="Mamilo" data-preco="50"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Mamilo.jpg" alt="Mamilo"></td><td class="piercing-info"><strong>Mamilo</strong></td><td class="piercing-price">R$ 50,00</td></tr>
-                        <tr class="piercing-row" data-id="co3" data-name="Mamilo (Par)" data-preco="85"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Mamilo (Par).jpg" alt="Mamilo (Par)"></td><td class="piercing-info"><strong>Mamilo (Par)</strong></td><td class="piercing-price">R$ 85,00</td></tr>
+                        <tr class="piercing-row" data-id="co1" data-name="Umbigo" data-preco="60"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Umbigo.jpg" alt="Umbigo"></td><td class="piercing-info"><strong>Umbigo</strong></td><td class="piercing-price">R$ 60</td></tr>
+                        <tr class="piercing-row" data-id="co2" data-name="Mamilo" data-preco="50"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Mamilo.jpg" alt="Mamilo"></td><td class="piercing-info"><strong>Mamilo</strong></td><td class="piercing-price">R$ 50</td></tr>
+                        <tr class="piercing-row" data-id="co3" data-name="Mamilo (Par)" data-preco="85"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Mamilo (Par).jpg" alt="Mamilo (Par)"></td><td class="piercing-info"><strong>Mamilo (Par)</strong></td><td class="piercing-price">R$ 85</td></tr>
                     </tbody></table></div>
                 </div>
                 <!-- BOCA -->
                 <div id="boca" class="category-section">
                     <h2><i class="fas fa-smile"></i> Boca</h2>
                     <div class="table-container"><table><tbody>
-                        <tr class="piercing-row" data-id="bo1" data-name="Ashley" data-preco="60"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Ashley.jpg" alt="Ashley"></td><td class="piercing-info"><strong>Ashley</strong></td><td class="piercing-price">R$ 60,00</td></tr>
-                        <tr class="piercing-row" data-id="bo2" data-name="Double Ashley" data-preco="100"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Double Ashley.jpg" alt="Double Ashley"></td><td class="piercing-info"><strong>Double Ashley</strong></td><td class="piercing-price">R$ 100,00</td></tr>
-                        <tr class="piercing-row" data-id="bo3" data-name="Dolphin Bites" data-preco="65"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Dolphin Bites.jpg" alt="Dolphin Bites"></td><td class="piercing-info"><strong>Dolphin Bites</strong></td><td class="piercing-price">R$ 65,00</td></tr>
-                        <tr class="piercing-row" data-id="bo4" data-name="Spider Bites" data-preco="65"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Spider Bites.jpg" alt="Spider Bites"></td><td class="piercing-info"><strong>Spider Bites</strong></td><td class="piercing-price">R$ 65,00</td></tr>
-                        <tr class="piercing-row" data-id="bo5" data-name="Shark Bites" data-preco="100"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Shark Bites.jpg" alt="Shark Bites"></td><td class="piercing-info"><strong>Shark Bites</strong></td><td class="piercing-price">R$ 100,00</td></tr>
-                        <tr class="piercing-row" data-id="bo6" data-name="Cyber Bites" data-preco="65"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Cyber Bites.jpg" alt="Cyber Bites"></td><td class="piercing-info"><strong>Cyber Bites</strong></td><td class="piercing-price">R$ 65,00</td></tr>
-                        <tr class="piercing-row" data-id="bo7" data-name="Snake Bites" data-preco="55"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Snake Bites.jpg" alt="Snake Bites"></td><td class="piercing-info"><strong>Snake Bites</strong></td><td class="piercing-price">R$ 55,00</td></tr>
-                        <tr class="piercing-row" data-id="bo8" data-name="Canine Bites" data-preco="100"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Canine Bites.jpg" alt="Canine Bites"></td><td class="piercing-info"><strong>Canine Bites</strong></td><td class="piercing-price">R$ 100,00</td></tr>
-                        <tr class="piercing-row" data-id="bo9" data-name="Angel Bites" data-preco="75"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Angel Bites.jpg" alt="Angel Bites"></td><td class="piercing-info"><strong>Angel Bites</strong></td><td class="piercing-price">R$ 75,00</td></tr>
-                        <tr class="piercing-row" data-id="bo10" data-name="Angel Fangs" data-preco="75"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Angel Fangs.jpg" alt="Angel Fangs"></td><td class="piercing-info"><strong>Angel Fangs</strong></td><td class="piercing-price">R$ 75,00</td></tr>
-                        <tr class="piercing-row" data-id="bo11" data-name="Labret" data-preco="45"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Labret.jpg" alt="Labret"></td><td class="piercing-info"><strong>Labret</strong></td><td class="piercing-price">R$ 45,00</td></tr>
-                        <tr class="piercing-row" data-id="bo12" data-name="Labret Lateral" data-preco="45"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Labret Lateral.jpg" alt="Labret Lateral"></td><td class="piercing-info"><strong>Labret Lateral</strong></td><td class="piercing-price">R$ 45,00</td></tr>
-                        <tr class="piercing-row" data-id="bo13" data-name="Vertical Labret" data-preco="50"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Vertical Labret.jpg" alt="Vertical Labret"></td><td class="piercing-info"><strong>Vertical Labret</strong></td><td class="piercing-price">R$ 50,00</td></tr>
-                        <tr class="piercing-row" data-id="bo14" data-name="Jestrum" data-preco="45"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Jestrum.jpg" alt="Jestrum"></td><td class="piercing-info"><strong>Jestrum</strong></td><td class="piercing-price">R$ 45,00</td></tr>
-                        <tr class="piercing-row" data-id="bo15" data-name="Medusa" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Medusa.jpg" alt="Medusa"></td><td class="piercing-info"><strong>Medusa</strong></td><td class="piercing-price">R$ 40,00</td></tr>
-                        <tr class="piercing-row" data-id="bo16" data-name="Madonna" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Madonna.jpg" alt="Madonna"></td><td class="piercing-info"><strong>Madonna</strong></td><td class="piercing-price">R$ 40,00</td></tr>
-                        <tr class="piercing-row" data-id="bo17" data-name="Monroe" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Monroe.jpg" alt="Monroe"></td><td class="piercing-info"><strong>Monroe</strong></td><td class="piercing-price">R$ 40,00</td></tr>
+                        <tr class="piercing-row" data-id="bo1" data-name="Ashley" data-preco="60"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Ashley.jpg" alt="Ashley"></td><td class="piercing-info"><strong>Ashley</strong></td><td class="piercing-price">R$ 60</td></tr>
+                        <tr class="piercing-row" data-id="bo2" data-name="Double Ashley" data-preco="100"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Double Ashley.jpg" alt="Double Ashley"></td><td class="piercing-info"><strong>Double Ashley</strong></td><td class="piercing-price">R$ 100</td></tr>
+                        <tr class="piercing-row" data-id="bo3" data-name="Dolphin Bites" data-preco="65"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Dolphin Bites.jpg" alt="Dolphin Bites"></td><td class="piercing-info"><strong>Dolphin Bites</strong></td><td class="piercing-price">R$ 65</td></tr>
+                        <tr class="piercing-row" data-id="bo4" data-name="Spider Bites" data-preco="65"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Spider Bites.jpg" alt="Spider Bites"></td><td class="piercing-info"><strong>Spider Bites</strong></td><td class="piercing-price">R$ 65</td></tr>
+                        <tr class="piercing-row" data-id="bo5" data-name="Shark Bites" data-preco="100"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Shark Bites.jpg" alt="Shark Bites"></td><td class="piercing-info"><strong>Shark Bites</strong></td><td class="piercing-price">R$ 100</td></tr>
+                        <tr class="piercing-row" data-id="bo6" data-name="Cyber Bites" data-preco="65"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Cyber Bites.jpg" alt="Cyber Bites"></td><td class="piercing-info"><strong>Cyber Bites</strong></td><td class="piercing-price">R$ 65</td></tr>
+                        <tr class="piercing-row" data-id="bo7" data-name="Snake Bites" data-preco="55"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Snake Bites.jpg" alt="Snake Bites"></td><td class="piercing-info"><strong>Snake Bites</strong></td><td class="piercing-price">R$ 55</td></tr>
+                        <tr class="piercing-row" data-id="bo8" data-name="Canine Bites" data-preco="100"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Canine Bites.jpg" alt="Canine Bites"></td><td class="piercing-info"><strong>Canine Bites</strong></td><td class="piercing-price">R$ 100</td></tr>
+                        <tr class="piercing-row" data-id="bo9" data-name="Angel Bites" data-preco="75"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Angel Bites.jpg" alt="Angel Bites"></td><td class="piercing-info"><strong>Angel Bites</strong></td><td class="piercing-price">R$ 75</td></tr>
+                        <tr class="piercing-row" data-id="bo10" data-name="Angel Fangs" data-preco="75"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Angel Fangs.jpg" alt="Angel Fangs"></td><td class="piercing-info"><strong>Angel Fangs</strong></td><td class="piercing-price">R$ 75</td></tr>
+                        <tr class="piercing-row" data-id="bo11" data-name="Labret" data-preco="45"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Labret.jpg" alt="Labret"></td><td class="piercing-info"><strong>Labret</strong></td><td class="piercing-price">R$ 45</td></tr>
+                        <tr class="piercing-row" data-id="bo12" data-name="Labret Lateral" data-preco="45"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Labret Lateral.jpg" alt="Labret Lateral"></td><td class="piercing-info"><strong>Labret Lateral</strong></td><td class="piercing-price">R$ 45</td></tr>
+                        <tr class="piercing-row" data-id="bo13" data-name="Vertical Labret" data-preco="50"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Vertical Labret.jpg" alt="Vertical Labret"></td><td class="piercing-info"><strong>Vertical Labret</strong></td><td class="piercing-price">R$ 50</td></tr>
+                        <tr class="piercing-row" data-id="bo14" data-name="Jestrum" data-preco="45"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Jestrum.jpg" alt="Jestrum"></td><td class="piercing-info"><strong>Jestrum</strong></td><td class="piercing-price">R$ 45</td></tr>
+                        <tr class="piercing-row" data-id="bo15" data-name="Medusa" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Medusa.jpg" alt="Medusa"></td><td class="piercing-info"><strong>Medusa</strong></td><td class="piercing-price">R$ 40</td></tr>
+                        <tr class="piercing-row" data-id="bo16" data-name="Madonna" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Madonna.jpg" alt="Madonna"></td><td class="piercing-info"><strong>Madonna</strong></td><td class="piercing-price">R$ 40</td></tr>
+                        <tr class="piercing-row" data-id="bo17" data-name="Monroe" data-preco="40"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Monroe.jpg" alt="Monroe"></td><td class="piercing-info"><strong>Monroe</strong></td><td class="piercing-price">R$ 40</td></tr>
                     </tbody></table></div>
                 </div>
                 <!-- ROSTO -->
                 <div id="rosto" class="category-section">
                     <h2><i class="fas fa-user"></i> Rosto</h2>
                     <div class="table-container"><table><tbody>
-                        <tr class="piercing-row" data-id="ro1" data-name="Supercílio/Sobrancelha" data-preco="50"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Supercílio.jpg" alt="Supercílio/Sobrancelha"></td><td class="piercing-info"><strong>Supercílio/Sobrancelha</strong></td><td class="piercing-price">R$ 50,00</td></tr>
-                        <tr class="piercing-row" data-id="ro2" data-name="Clown Eyes / Supercílio Duplo" data-preco="80"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Clown Eyes.jpg" alt="Clown Eyes / Supercílio Duplo"></td><td class="piercing-info"><strong>Clown Eyes / Supercílio Duplo</strong></td><td class="piercing-price">R$ 80,00</td></tr>
-                        <tr class="piercing-row" data-id="ro3" data-name="Nostril" data-preco="50"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Nostril.jpg" alt="Nostril"></td><td class="piercing-info"><strong>Nostril</strong></td><td class="piercing-price">R$ 50,00</td></tr>
-                        <tr class="piercing-row" data-id="ro4" data-name="Duplo Nostril" data-preco="70"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Duplo Nostril.jpg" alt="Duplo Nostril"></td><td class="piercing-info"><strong>Duplo Nostril</strong></td><td class="piercing-price">R$ 70,00</td></tr>
-                        <tr class="piercing-row" data-id="ro5" data-name="Septo" data-preco="55"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Septo.jpg" alt="Septo"></td><td class="piercing-info"><strong>Septo</strong></td><td class="piercing-price">R$ 55,00</td></tr>
-                        <tr class="piercing-row" data-id="ro6" data-name="Bridge" data-preco="70"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Bridge.jpg" alt="Bridge"></td><td class="piercing-info"><strong>Bridge</strong></td><td class="piercing-price">R$ 70,00</td></tr>
-                        <tr class="piercing-row" data-id="ro7" data-name="Surface" data-preco="130"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Surface.jpg" alt="Surface"></td><td class="piercing-info"><strong>Surface</strong><br><small>Joia inclusa em Titânio</small></td><td class="piercing-price">R$ 130,00</td></tr>
+                        <tr class="piercing-row" data-id="ro1" data-name="Supercílio/Sobrancelha" data-preco="50"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Supercílio.jpg" alt="Supercílio/Sobrancelha"></td><td class="piercing-info"><strong>Supercílio/Sobrancelha</strong></td><td class="piercing-price">R$ 50</td></tr>
+                        <tr class="piercing-row" data-id="ro2" data-name="Clown Eyes / Supercílio Duplo" data-preco="80"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Clown Eyes.jpg" alt="Clown Eyes / Supercílio Duplo"></td><td class="piercing-info"><strong>Clown Eyes / Supercílio Duplo</strong></td><td class="piercing-price">R$ 80</td></tr>
+                        <tr class="piercing-row" data-id="ro3" data-name="Nostril" data-preco="50"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Nostril.jpg" alt="Nostril"></td><td class="piercing-info"><strong>Nostril</strong></td><td class="piercing-price">R$ 50</td></tr>
+                        <tr class="piercing-row" data-id="ro4" data-name="Duplo Nostril" data-preco="70"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Duplo Nostril.jpg" alt="Duplo Nostril"></td><td class="piercing-info"><strong>Duplo Nostril</strong></td><td class="piercing-price">R$ 70</td></tr>
+                        <tr class="piercing-row" data-id="ro5" data-name="Septo" data-preco="55"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Septo.jpg" alt="Septo"></td><td class="piercing-info"><strong>Septo</strong></td><td class="piercing-price">R$ 55</td></tr>
+                        <tr class="piercing-row" data-id="ro6" data-name="Bridge" data-preco="70"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Bridge.jpg" alt="Bridge"></td><td class="piercing-info"><strong>Bridge</strong></td><td class="piercing-price">R$ 70</td></tr>
+                        <tr class="piercing-row" data-id="ro7" data-name="Surface" data-preco="130"><td><span class="check-mark"></span></td><td class="piercing-img"><img src="imagens/Surface.jpg" alt="Surface"></td><td class="piercing-info"><strong>Surface</strong><br><small>Joia inclusa em Titânio</small></td><td class="piercing-price">R$ 130</td></tr>
                     </tbody></table></div>
                 </div>
             </div>
@@ -486,95 +343,15 @@
             <section class="form-section" id="dados">
                 <h2><i class="fas fa-user-edit"></i> Seus dados</h2>
                 <div class="form-card">
-                    <div class="form-group">
-                        <label for="nome"><i class="fas fa-user"></i> Nome completo *</label>
-                        <div class="input-with-icon">
-                            <i class="fas fa-user"></i>
-                            <input type="text" id="nome" placeholder="Seu nome" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label><i class="fas fa-venus-mars"></i> Pronomes</label>
-                        <div class="chips-container" id="pronomes-chips">
-                            <label class="chip"><input type="radio" name="pronome" value="Ela/Dela" checked> Ela/Dela</label>
-                            <label class="chip"><input type="radio" name="pronome" value="Ele/Dele"> Ele/Dele</label>
-                            <label class="chip"><input type="radio" name="pronome" value="Elu/Delu"> Elu/Delu</label>
-                            <label class="chip"><input type="radio" name="pronome" value="outro"> Outro</label>
-                        </div>
-                        <input type="text" id="pronome-outro" placeholder="Digite seu pronome" style="display:none; margin-top:10px; width:100%; padding:12px; border-radius:10px; border:1px solid var(--input-border); background:var(--input-bg); color:var(--text);">
-                    </div>
-                    <div class="form-group">
-                        <label><i class="fas fa-home"></i> Atendimento a domicílio?</label>
-                        <div class="chips-container" id="domicilio-chips">
-                            <label class="chip"><input type="radio" name="domicilio" value="nao" checked> Não, vou até você</label>
-                            <label class="chip"><input type="radio" name="domicilio" value="sim"> Sim, quero em casa</label>
-                        </div>
-                    </div>
-                    <div class="form-group" id="bairro-cidade-container" style="display:none;">
-                        <label for="bairro-cidade"><i class="fas fa-map-marker-alt"></i> Selecione seu bairro / cidade</label>
-                        <div class="input-with-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <select id="bairro-cidade">
-                                <option value="">Escolha a localização</option>
-                                <optgroup label="Natal (R$15-R$25)">
-                                    <option value="Planalto / Leningrado" data-preco="15">Planalto / Leningrado – R$15</option>
-                                    <option value="Felipe Camarão" data-preco="20">Felipe Camarão – R$20</option>
-                                    <option value="Cidade Nova" data-preco="20">Cidade Nova – R$20</option>
-                                    <option value="Guarapes" data-preco="20">Guarapes – R$20</option>
-                                    <option value="Bom Pastor" data-preco="20">Bom Pastor – R$20</option>
-                                    <option value="Quintas" data-preco="25">Quintas – R$25</option>
-                                    <option value="Alecrim" data-preco="25">Alecrim – R$25</option>
-                                    <option value="Lagoa Nova" data-preco="25">Lagoa Nova – R$25</option>
-                                    <option value="Tirol" data-preco="25">Tirol – R$25</option>
-                                    <option value="Petrópolis" data-preco="25">Petrópolis – R$25</option>
-                                    <option value="Ponta Negra" data-preco="25">Ponta Negra – R$25</option>
-                                    <option value="Redinha" data-preco="25">Redinha – R$25</option>
-                                </optgroup>
-                                <optgroup label="Região Metropolitana">
-                                    <option value="Parnamirim (Centro)" data-preco="25">Parnamirim (Centro) – R$25</option>
-                                    <option value="São Gonçalo do Amarante" data-preco="30">São Gonçalo do Amarante – R$30</option>
-                                    <option value="Extremoz" data-preco="30">Extremoz – R$30</option>
-                                </optgroup>
-                                <option value="Outra (verificar)" data-preco="0">Outra localidade (a combinar)</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="disponibilidade"><i class="fas fa-calendar-alt"></i> Disponibilidade de horário (opcional)</label>
-                        <div class="input-with-icon">
-                            <i class="fas fa-calendar-alt"></i>
-                            <select id="disponibilidade">
-                                <option value="">Selecione</option>
-                                <option value="Manhã">Manhã</option>
-                                <option value="Tarde">Tarde</option>
-                                <option value="Noite">Noite</option>
-                                <option value="A combinar">A combinar</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="como-conheceu"><i class="fas fa-search"></i> Como me conheceu? (opcional)</label>
-                        <div class="input-with-icon">
-                            <i class="fas fa-search"></i>
-                            <select id="como-conheceu">
-                                <option value="">Selecione</option>
-                                <option value="Instagram">Instagram</option>
-                                <option value="Indicação">Indicação</option>
-                                <option value="TikTok">TikTok</option>
-                                <option value="Google">Google</option>
-                                <option value="Outro">Outro</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="historico"><i class="fas fa-notes-medical"></i> Histórico de piercings / alergias (opcional)</label>
-                        <div class="input-with-icon">
-                            <i class="fas fa-notes-medical"></i>
-                            <textarea id="historico" rows="3" placeholder="Conte-me..."></textarea>
-                        </div>
-                    </div>
+                    <div class="form-group"><label for="nome"><i class="fas fa-user"></i> Nome completo *</label><div class="input-with-icon"><i class="fas fa-user"></i><input type="text" id="nome" placeholder="Seu nome" required></div></div>
+                    <div class="form-group"><label><i class="fas fa-venus-mars"></i> Pronomes</label><div class="chips-container" id="pronomes-chips"><label class="chip"><input type="radio" name="pronome" value="Ela/Dela" checked> Ela/Dela</label><label class="chip"><input type="radio" name="pronome" value="Ele/Dele"> Ele/Dele</label><label class="chip"><input type="radio" name="pronome" value="Elu/Delu"> Elu/Delu</label><label class="chip"><input type="radio" name="pronome" value="outro"> Outro</label></div><input type="text" id="pronome-outro" placeholder="Digite seu pronome" style="display:none; margin-top:8px; width:100%; padding:10px; border-radius:8px; border:1px solid var(--input-border); background:var(--input-bg); color:var(--text);"></div>
+                    <div class="form-group"><label><i class="fas fa-home"></i> Atendimento a domicílio?</label><div class="chips-container" id="domicilio-chips"><label class="chip"><input type="radio" name="domicilio" value="nao" checked> Não, vou até você</label><label class="chip"><input type="radio" name="domicilio" value="sim"> Sim, quero em casa</label></div></div>
+                    <div class="form-group" id="bairro-cidade-container" style="display:none;"><label for="bairro-cidade"><i class="fas fa-map-marker-alt"></i> Selecione seu bairro / cidade</label><div class="input-with-icon"><i class="fas fa-map-marker-alt"></i><select id="bairro-cidade"><option value="">Escolha a localização</option><optgroup label="Natal (R$15-R$25)"><option value="Planalto / Leningrado" data-preco="15">Planalto / Leningrado – R$15</option><option value="Felipe Camarão" data-preco="20">Felipe Camarão – R$20</option><option value="Cidade Nova" data-preco="20">Cidade Nova – R$20</option><option value="Guarapes" data-preco="20">Guarapes – R$20</option><option value="Bom Pastor" data-preco="20">Bom Pastor – R$20</option><option value="Quintas" data-preco="25">Quintas – R$25</option><option value="Alecrim" data-preco="25">Alecrim – R$25</option><option value="Lagoa Nova" data-preco="25">Lagoa Nova – R$25</option><option value="Tirol" data-preco="25">Tirol – R$25</option><option value="Petrópolis" data-preco="25">Petrópolis – R$25</option><option value="Ponta Negra" data-preco="25">Ponta Negra – R$25</option><option value="Redinha" data-preco="25">Redinha – R$25</option></optgroup><optgroup label="Região Metropolitana"><option value="Parnamirim (Centro)" data-preco="25">Parnamirim (Centro) – R$25</option><option value="São Gonçalo do Amarante" data-preco="30">São Gonçalo do Amarante – R$30</option><option value="Extremoz" data-preco="30">Extremoz – R$30</option></optgroup><option value="Outra (verificar)" data-preco="0">Outra localidade (a combinar)</option></select></div></div>
+                    <div class="form-group"><label for="disponibilidade"><i class="fas fa-calendar-alt"></i> Disponibilidade de horário (opcional)</label><div class="input-with-icon"><i class="fas fa-calendar-alt"></i><select id="disponibilidade"><option value="">Selecione</option><option value="Manhã">Manhã</option><option value="Tarde">Tarde</option><option value="Noite">Noite</option><option value="A combinar">A combinar</option></select></div></div>
+                    <div class="form-group"><label for="como-conheceu"><i class="fas fa-search"></i> Como me conheceu? (opcional)</label><div class="input-with-icon"><i class="fas fa-search"></i><select id="como-conheceu"><option value="">Selecione</option><option value="Instagram">Instagram</option><option value="Indicação">Indicação</option><option value="TikTok">TikTok</option><option value="Google">Google</option><option value="Outro">Outro</option></select></div></div>
+                    <div class="form-group"><label for="historico"><i class="fas fa-notes-medical"></i> Histórico de piercings / alergias (opcional)</label><div class="input-with-icon"><i class="fas fa-notes-medical"></i><textarea id="historico" rows="2" placeholder="Conte-me..."></textarea></div></div>
                     <button class="btn-whatsapp" id="btn-enviar"><i class="fab fa-whatsapp"></i> Enviar pedido pelo WhatsApp</button>
-                    <p style="font-size:12px; margin-top:10px; color: var(--text-secondary); text-align:center;">Seus dados são usados apenas para o agendamento e não serão compartilhados.</p>
+                    <p style="font-size:11px; margin-top:8px; color: var(--text-secondary); text-align:center;">Seus dados são usados apenas para o agendamento e não serão compartilhados.</p>
                 </div>
             </section>
 
@@ -610,58 +387,21 @@
         (function() {
             const NUMERO_WHATSAPP = '5584999888967';
             const selecionados = {};
-
             const tiposPorPiercing = {
-                or3: ['aco1', 'titanio'],
-                co2: ['aco1', 'titanio'],
-                co3: ['aco1', 'titanio'],
-                ro3: ['aco1', 'titanio'],
-                ro5: ['aco1', 'titanio'],
+                or3: ['aco1', 'titanio'], co2: ['aco1', 'titanio'], co3: ['aco1', 'titanio'],
+                ro3: ['aco1', 'titanio'], ro5: ['aco1', 'titanio'],
             };
-
             function sanitizeNome(nome) {
-                return nome
-                    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-                    .replace(/[^a-zA-Z0-9]/g, '_')
-                    .replace(/_+/g, '_')
-                    .replace(/^_|_$/g, '');
+                return nome.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
             }
-
             function getJoiasForPiercing(id, nomePiercing) {
                 const tipos = tiposPorPiercing[id] || ['aco1', 'aco2', 'titanio'];
                 const nomeSanitizado = sanitizeNome(nomePiercing);
                 const base = [];
-
-                if (tipos.includes('aco1')) {
-                    base.push({
-                        value: 'aco1',
-                        label: 'Aço Cirúrgico Modelo 1',
-                        preco: 15,
-                        img: `imagens/joia1_${nomeSanitizado}.jpg`
-                    });
-                }
-                if (tipos.includes('aco2')) {
-                    base.push({
-                        value: 'aco2',
-                        label: 'Aço Cirúrgico Modelo 2',
-                        preco: 25,
-                        img: `imagens/joia2_${nomeSanitizado}.jpg`
-                    });
-                }
-                if (tipos.includes('titanio')) {
-                    base.push({
-                        value: 'titanio',
-                        label: 'Titânio',
-                        preco: 35,
-                        img: `imagens/joia3_${nomeSanitizado}.jpg`
-                    });
-                }
-                base.push({
-                    value: 'outro',
-                    label: 'Outro (descreva)',
-                    preco: 0,
-                    img: ''
-                });
+                if (tipos.includes('aco1')) base.push({ value: 'aco1', label: 'Aço Cirúrgico Modelo 1', preco: 15, img: `imagens/joia1_${nomeSanitizado}.jpg` });
+                if (tipos.includes('aco2')) base.push({ value: 'aco2', label: 'Aço Cirúrgico Modelo 2', preco: 25, img: `imagens/joia2_${nomeSanitizado}.jpg` });
+                if (tipos.includes('titanio')) base.push({ value: 'titanio', label: 'Titânio', preco: 35, img: `imagens/joia3_${nomeSanitizado}.jpg` });
+                base.push({ value: 'outro', label: 'Outro (descreva)', preco: 0, img: '' });
                 return base;
             }
 
@@ -669,29 +409,13 @@
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightboxImg');
             const lightboxClose = document.getElementById('lightboxClose');
-
-            function openLightbox(src) {
-                if (!src) return;
-                lightboxImg.src = src;
-                lightbox.classList.add('active');
-            }
-
-            function closeLightbox() {
-                lightbox.classList.remove('active');
-                lightboxImg.src = '';
-            }
-
+            function openLightbox(src) { if (!src) return; lightboxImg.src = src; lightbox.classList.add('active'); }
+            function closeLightbox() { lightbox.classList.remove('active'); lightboxImg.src = ''; }
             lightboxClose.addEventListener('click', closeLightbox);
-            lightbox.addEventListener('click', function(e) {
-                if (e.target === lightbox) closeLightbox();
-            });
-
-            // Adiciona evento de clique em todas as imagens de piercing e joia
+            lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
             document.addEventListener('click', function(e) {
                 const img = e.target.closest('.piercing-img img, .joia-img img, .joia-selected-preview img');
-                if (img && img.src && !img.src.includes('data:image')) {
-                    openLightbox(img.src);
-                }
+                if (img && img.src && !img.src.includes('data:image')) openLightbox(img.src);
             });
 
             // Theme toggle
@@ -708,13 +432,10 @@
 
             // Floating nav
             const floatingNav = document.getElementById('floatingNav');
-            window.addEventListener('scroll', () => floatingNav.classList.toggle('visible', window.scrollY > 300));
+            window.addEventListener('scroll', () => floatingNav.classList.toggle('visible', window.scrollY > 200));
             document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
             document.querySelectorAll('.category-quick-links a').forEach(a => {
-                a.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.getElementById(this.getAttribute('href').substring(1))?.scrollIntoView({ behavior: 'smooth' });
-                });
+                a.addEventListener('click', function(e) { e.preventDefault(); document.getElementById(this.getAttribute('href').substring(1))?.scrollIntoView({ behavior: 'smooth' }); });
             });
 
             // Carousels
@@ -722,10 +443,7 @@
                 const track = document.getElementById(trackId), prev = document.getElementById(prevId), next = document.getElementById(nextId), dots = document.getElementById(dotsId);
                 const cards = [...track.children];
                 let idx = 0;
-                const update = () => {
-                    track.style.transform = `translateX(-${idx * 100}%)`;
-                    [...dots.children].forEach((d, i) => d.classList.toggle('active', i === idx));
-                };
+                const update = () => { track.style.transform = `translateX(-${idx * 100}%)`; [...dots.children].forEach((d, i) => d.classList.toggle('active', i === idx)); };
                 cards.forEach((_, i) => { const d = document.createElement('button'); d.className = 'carousel-dot'; if (i === 0) d.classList.add('active'); d.addEventListener('click', () => { idx = i; update(); }); dots.appendChild(d); });
                 prev.addEventListener('click', () => { idx = (idx - 1 + cards.length) % cards.length; update(); });
                 next.addEventListener('click', () => { idx = (idx + 1) % cards.length; update(); });
@@ -743,20 +461,12 @@
                     const chip = e.target.closest('.chip');
                     if (!chip) return;
                     const radio = chip.querySelector('input[type="radio"]');
-                    if (radio) {
-                        radio.checked = true;
-                        radio.dispatchEvent(new Event('change', { bubbles: true }));
-                    }
+                    if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change', { bubbles: true })); }
                 });
                 container.querySelectorAll('input[type="radio"]').forEach(r => {
                     r.addEventListener('change', function() {
-                        if (this.value === 'outro' && otherInputId) {
-                            const otherInput = document.getElementById(otherInputId);
-                            if (otherInput) otherInput.style.display = 'block';
-                        } else if (otherInputId) {
-                            const otherInput = document.getElementById(otherInputId);
-                            if (otherInput) otherInput.style.display = 'none';
-                        }
+                        if (this.value === 'outro' && otherInputId) { document.getElementById(otherInputId).style.display = 'block'; }
+                        else if (otherInputId) { document.getElementById(otherInputId).style.display = 'none'; }
                     });
                 });
             }
@@ -786,57 +496,33 @@
             });
 
             function adicionarOpcoesJoia(row) {
-                const id = row.dataset.id;
-                const nome = row.dataset.name;
+                const id = row.dataset.id; const nome = row.dataset.name;
                 removerOpcoesJoia(row);
                 const joias = getJoiasForPiercing(id, nome);
                 const tr = document.createElement('tr'); tr.className = 'joia-options-row'; tr.dataset.piercingId = id;
-                tr.innerHTML = `<td colspan="5">
-                    <div class="joia-options">
-                        <div class="joia-list">
-                            ${joias.map((op, i) => {
-                                const imgHtml = op.img ? `<div class="joia-img"><img src="${op.img}" alt=""></div>` : `<div class="joia-other-icon"><i class="fas fa-question"></i></div>`;
-                                return `<label class="joia-option">
-                                    <input type="radio" name="joia_${id}" value="${op.value}" ${i===0?'checked':''} data-preco="${op.preco}" data-img="${op.img || ''}">
-                                    ${imgHtml}
-                                    <span>${op.label} ${op.preco>0?'(+R$ '+op.preco.toFixed(2)+')':''}</span>
-                                    ${op.value==='outro'?'<input type="text" class="other-input" placeholder="Descreva...">':''}
-                                </label>`;
-                            }).join('')}
-                        </div>
-                        <div class="joia-selected-preview">
-                            <img id="joia-preview-${id}" src="${joias[0].img || ''}" alt="Joia selecionada">
-                        </div>
-                    </div></td>`;
+                tr.innerHTML = `<td colspan="5"><div class="joia-options"><div class="joia-list">${joias.map((op, i) => { const imgHtml = op.img ? `<div class="joia-img"><img src="${op.img}" alt=""></div>` : `<div class="joia-other-icon"><i class="fas fa-question"></i></div>`; return `<label class="joia-option"><input type="radio" name="joia_${id}" value="${op.value}" ${i===0?'checked':''} data-preco="${op.preco}" data-img="${op.img || ''}">${imgHtml}<span>${op.label} ${op.preco>0?'(+R$ '+op.preco.toFixed(2)+')':''}</span>${op.value==='outro'?'<input type="text" class="other-input" placeholder="Descreva...">':''}</label>`; }).join('')}</div><div class="joia-selected-preview"><img id="joia-preview-${id}" src="${joias[0].img || ''}" alt="Joia selecionada"></div></div></td>`;
                 row.parentNode.insertBefore(tr, row.nextSibling);
                 const previewImg = document.getElementById(`joia-preview-${id}`);
                 const radioInicial = tr.querySelector('input:checked');
-                if (radioInicial.dataset.img) previewImg.src = radioInicial.dataset.img;
-                else previewImg.style.display = 'none';
+                if (radioInicial.dataset.img) previewImg.src = radioInicial.dataset.img; else previewImg.style.display = 'none';
                 selecionados[id] = { row, joiaTipo: radioInicial.value, joiaPreco: +radioInicial.dataset.preco, joiaDescricao: '' };
                 const other = tr.querySelector('.other-input');
                 if (other) { other.addEventListener('input', function(e) { e.stopPropagation(); if (selecionados[id]?.joiaTipo === 'outro') { selecionados[id].joiaDescricao = this.value; atualizarResumo(); } }); }
                 tr.querySelectorAll('input[type=radio]').forEach(r => r.addEventListener('change', function(e) {
                     e.stopPropagation();
                     selecionados[id].joiaTipo = this.value; selecionados[id].joiaPreco = +this.dataset.preco;
-                    if (this.dataset.img) { previewImg.src = this.dataset.img; previewImg.style.display = ''; }
-                    else { previewImg.style.display = 'none'; }
+                    if (this.dataset.img) { previewImg.src = this.dataset.img; previewImg.style.display = ''; } else { previewImg.style.display = 'none'; }
                     if (this.value !== 'outro') { selecionados[id].joiaDescricao = ''; if (other) other.value = ''; }
                     atualizarResumo();
                 }));
                 if (radioInicial.value === 'outro' && other) other.style.display = 'block';
                 atualizarResumo();
             }
-
             function removerOpcoesJoia(row) { const n = row.nextElementSibling; if (n?.classList.contains('joia-options-row') && n.dataset.piercingId === row.dataset.id) n.remove(); }
 
             function atualizarResumo() {
                 const linhas = document.querySelectorAll('.piercing-row.selected');
-                const cont = document.getElementById('contador');
-                const srv = document.getElementById('txt-servicos');
-                const joi = document.getElementById('txt-joias');
-                const dom = document.getElementById('txt-domicilio');
-                const tot = document.getElementById('txt-total');
+                const cont = document.getElementById('contador'), srv = document.getElementById('txt-servicos'), joi = document.getElementById('txt-joias'), dom = document.getElementById('txt-domicilio'), tot = document.getElementById('txt-total');
                 if (!linhas.length) { cont.textContent = 'Nenhum piercing selecionado'; srv.textContent = joi.textContent = dom.textContent = ''; tot.textContent = 'Total: R$ 0,00'; return; }
                 cont.textContent = `Você selecionou ${linhas.length} piercing(s)`;
                 let sm = '', jm = '', total = 0;
@@ -851,8 +537,7 @@
                 });
                 let taxa = 0, dm = '';
                 if (document.querySelector('input[name="domicilio"]:checked')?.value === 'sim') {
-                    const sel = document.getElementById('bairro-cidade');
-                    const opt = sel.options[sel.selectedIndex];
+                    const sel = document.getElementById('bairro-cidade'), opt = sel.options[sel.selectedIndex];
                     taxa = opt?.dataset.preco ? +opt.dataset.preco : 0;
                     dm = taxa > 0 ? `🚗 Atendimento em ${opt.text.split(' – ')[0]}: +R$ ${taxa.toFixed(2)}` : '🚗 Atendimento domiciliar: local a combinar';
                     total += taxa;
@@ -864,14 +549,9 @@
             function gerarMensagem() {
                 const nome = document.getElementById('nome').value.trim();
                 const pron = (() => { const r = document.querySelector('input[name="pronome"]:checked'); return r?.value === 'outro' ? document.getElementById('pronome-outro').value.trim() : (r?.value||''); })();
-                const disp = document.getElementById('disponibilidade').value;
-                const como = document.getElementById('como-conheceu').value;
-                const hist = document.getElementById('historico').value.trim();
+                const disp = document.getElementById('disponibilidade').value, como = document.getElementById('como-conheceu').value, hist = document.getElementById('historico').value.trim();
                 const domSim = document.querySelector('input[name="domicilio"]:checked')?.value === 'sim';
-                const selDom = document.getElementById('bairro-cidade');
-                const domOpt = selDom.options[selDom.selectedIndex];
-                const taxaDom = domSim ? (+domOpt?.dataset.preco || 0) : 0;
-
+                const selDom = document.getElementById('bairro-cidade'), domOpt = selDom.options[selDom.selectedIndex], taxaDom = domSim ? (+domOpt?.dataset.preco || 0) : 0;
                 let msg = `Olá, Marie! 🌸\n\nMe chamo *${nome}*${pron ? ' ('+pron+')' : ''}.\n\nQuero furar:\n`;
                 let total = 0;
                 document.querySelectorAll('.piercing-row.selected').forEach(r => {
@@ -888,11 +568,8 @@
                 if (domSim && taxaDom > 0) { total += taxaDom; msg += `\n🚗 Atendimento em ${domOpt.text.split(' – ')[0]}: +R$ ${taxaDom.toFixed(2)}`; }
                 else if (domSim) msg += `\n🚗 Atendimento domiciliar: local a combinar`;
                 msg += `\n💰 *Total: R$ ${total.toFixed(2)}*\n`;
-                if (disp) msg += `\n⏰ Preferência: ${disp}`;
-                if (como) msg += `\n🔍 Me conheceu via: ${como}`;
-                if (hist) msg += `\n📋 Histórico:\n${hist}`;
-                msg += `\n\nAguardo seu retorno! 💎`;
-                return msg;
+                if (disp) msg += `\n⏰ Preferência: ${disp}`; if (como) msg += `\n🔍 Me conheceu via: ${como}`; if (hist) msg += `\n📋 Histórico:\n${hist}`;
+                msg += `\n\nAguardo seu retorno! 💎`; return msg;
             }
 
             document.getElementById('btn-enviar').addEventListener('click', () => {
